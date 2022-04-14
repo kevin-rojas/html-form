@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+   <div class="form">
+        <div>
+            <label>Ingrese nombre:</label>
+            <input placeholder="ingrese nombre">
+        </div>
+        <div>
+            <label>Ingrese nombre:</label>
+            <input id="nombre" placeholder="ingrese nombre">
+        </div>
+        <div>
+            <label>Ingrese nombre:</label>
+            <input id="apellidos" placeholder="ingrese nombre">
+        </div>
+        <div>
+            <label>Ingrese nombre:</label>
+            <input id="dni" placeholder="ingrese nombre">
+        </div>
+        <div>
+            <label>Ingrese nombre:</label>
+            <input id="edad" placeholder="ingrese nombre">
+        </div>
+        <div>
+            <label>Fecha</label>
+            <input type="date" id="fecha" name="trip-start"     value="2018-07-22"    min="2018-01-01" max="2018-12-31">
+        </div>
+        <button class="btnadd" onclick="agregar()">Guardar</button>
+   </div>
+
+   <div class="viewdata">
+    <table>
+        <thead>
+          <tr>
+            <th>{{data[0]}}</th>
+            <th>Savings</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>January</td>
+            <td>$100</td>
+          </tr>
+          <tr>
+            <td>February</td>
+            <td>$80</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Sum</td>
+            <td>$180</td>
+          </tr>
+        </tfoot>
+      </table>
+   </div>
+</body>
+</html>
