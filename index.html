@@ -6,62 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
     <script src="./index.js"></script>
+    
     <title>Document</title>
+    <div style="text-align: left;font-weight: bold;font-size: 25px;font-family: 'Robot';margin: 10px;">Historial Medico</div>
 </head>
 <body>
    <div class="form">
-        <div>
-            <label>Ingrese nombre:</label>
-            <input placeholder="ingrese nombre">
+        <div class="form-items">
+            <label class="labelform">DNI:</label>
+            <input id="dni" placeholder="DNI">
         </div>
-        <div>
-            <label>Ingrese nombre:</label>
-            <input id="nombre" placeholder="ingrese nombre">
+        <div class="form-items">
+          <label class="labelform">Fecha:</label>
+          <input type="date" id="fecha" name="trip-start"     value="2018-07-22"    min="1990-01-01" max="2050-12-31">
         </div>
-        <div>
-            <label>Ingrese nombre:</label>
-            <input id="apellidos" placeholder="ingrese nombre">
+        <div class="form-items">
+            <label class="labelform">Nombre:</label>
+            <input id="nombre" placeholder="Nombre">
         </div>
-        <div>
-            <label>Ingrese nombre:</label>
-            <input id="dni" placeholder="ingrese nombre">
+        <div class="form-items">
+            <label class="labelform">Apellido:</label>
+            <input id="apellidos" placeholder="Apellido">
         </div>
-        <div>
-            <label>Ingrese nombre:</label>
-            <input id="edad" placeholder="ingrese nombre">
-        </div>
-        <div>
-            <label>Fecha</label>
-            <input type="date" id="fecha" name="trip-start"     value="2018-07-22"    min="2018-01-01" max="2018-12-31">
+        <div class="form-items">
+            <label class="labelform">Atenciones:</label>
+            <input id="atenciones" placeholder="numero de atencion">  
         </div>
         <button class="btnadd" onclick="agregar()">Guardar</button>
    </div>
+   <div style="margin: 15px;">
+     <input id="numerodeconsulta" value="" placeholder="ingrese numero de paciente">
+    <button onclick="buscarPaciente()">Buscar</button> 
 
+   </div>
    <div class="viewdata">
     <table>
-        <thead>
+        <thead >
           <tr>
-            <th>{{data[0]}}</th>
-            <th>Savings</th>
+            <th>DNI</th>
+            <th>FechaNacimiento</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Atenciones</th>
+            
           </tr>
         </thead>
-        <tbody>
+        <tbody >
+          
           <tr>
-            <td>January</td>
-            <td>$100</td>
+              <th class="text-left">40524211</th>
+              <th class="text-left">18/03/1979</th>
+              <th class="text-left">HUBEL</th>
+              <th class="text-left">SOLIS</th>
+              <th class="text-left">20200502</th>
           </tr>
           <tr>
-            <td>February</td>
-            <td>$80</td>
+              <th class="text-left">40050022</th>
+              <th class="text-left">01/01/2000</th>
+              <th class="text-left">JOSE</th>
+              <th class="text-left">PEREZ</th>
+              <th class="text-left">20190408</th>
           </tr>
+          <tr>
+              <th class="text-left">40524211</th>
+              <th class="text-left">18/03/1979</th>
+              <th class="text-left">HUBEL</th>
+              <th class="text-left">SOLIS</th>
+              <th class="text-left">20210606</th>
+          </tr>
+          <tr>
+              <th class="text-left">60050021</th>
+              <th class="text-left">02/02/2015</th>
+              <th class="text-left">LUIS</th>
+              <th class="text-left">SOTO</th>
+              <th class="text-left">20180806</th>
+          </tr>
+          
         </tbody>
-        <tfoot>
-          <tr>
-            <td>Sum</td>
-            <td>$180</td>
-          </tr>
-        </tfoot>
+        <table id="myTable"></table>
       </table>
+      
+   </div>
+   <div id="modalconsulta" class="modal">
+     <h3>Historial del paciente</h3>
+     <span class="close">&times;</span>
+      <div class="modal-content">
+        <p></p>
+      </div>
+      <button>Cerrar</button>
    </div>
 </body>
 </html>
