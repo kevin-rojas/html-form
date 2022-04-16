@@ -1,6 +1,6 @@
 
 var data=[];
-
+//aca rellenemos nuestro array con el historial del paciente en un objeto 
 var historial=[
   {
     atencion:20200502,
@@ -27,8 +27,8 @@ var historial=[
     receta:'Hidratacion Descanso'
   },
 ]
-
-function agregar(){
+//esto es una funcion en desarroollo que añadia paceintes ala tabla 
+/*function agregar(){
  var object ={
     dni:document.getElementById("dni").value,
     fecha:document.getElementById("fecha").value,
@@ -64,8 +64,8 @@ function clearInputs(){
   document.getElementById('nombre').value = '';
   document.getElementById('apellidos').value = '';
   document.getElementById('atenciones').value = '';
-}
-
+}*/
+//aca asemos la parte logica para acer la busquedaq del historial del paceinte 
 function buscarPaciente(){
     var numerodeconsulta =document.getElementById("numerodeconsulta").value;
     var modal = document.getElementById("modalconsulta");
